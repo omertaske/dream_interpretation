@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Gradient tanımları -->
+  <defs>
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4af37;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#f4d03f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#d4af37;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#f4d03f;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#d4af37;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- Işıltı efekti -->
+  <circle cx="100" cy="100" r="90" fill="url(#glowGradient)" opacity="0.5"/>
+  
+  <!-- Ana daire çerçeve -->
+  <circle cx="100" cy="100" r="85" fill="none" stroke="url(#goldGradient)" stroke-width="2" opacity="0.4"/>
+  
+  <!-- Hilal (Ay) -->
+  <path d="M 100 30 
+           A 45 45 0 1 1 100 170
+           A 35 35 0 1 0 100 30 Z" 
+        fill="url(#goldGradient)" 
+        opacity="0.9"/>
+  
+  <!-- Yıldız -->
+  <path d="M 100 50 
+           L 106 66 
+           L 123 66 
+           L 110 76 
+           L 115 92 
+           L 100 82 
+           L 85 92 
+           L 90 76 
+           L 77 66 
+           L 94 66 Z" 
+        fill="url(#goldGradient)"/>
+  
+  <!-- Dekoratif hatlar (hat sanatı tarzı) -->
+  <path d="M 30 100 Q 50 95, 70 100" 
+        stroke="url(#goldGradient)" 
+        stroke-width="1.5" 
+        fill="none" 
+        opacity="0.6"/>
+  <path d="M 130 100 Q 150 95, 170 100" 
+        stroke="url(#goldGradient)" 
+        stroke-width="1.5" 
+        fill="none" 
+        opacity="0.6"/>
+  
+  <!-- Bulut sembolü (rüya teması) -->
+  <path d="M 60 140 
+           Q 55 135, 60 130 
+           Q 65 125, 70 130
+           Q 75 125, 80 130
+           Q 85 125, 90 130
+           Q 95 135, 90 140
+           Z" 
+        fill="url(#goldGradient)" 
+        opacity="0.5"/>
+  
+  <path d="M 110 140 
+           Q 105 135, 110 130 
+           Q 115 125, 120 130
+           Q 125 125, 130 130
+           Q 135 125, 140 130
+           Q 145 135, 140 140
+           Z" 
+        fill="url(#goldGradient)" 
+        opacity="0.5"/>
+  
+  <!-- İç halka -->
+  <circle cx="100" cy="100" r="70" fill="none" stroke="url(#goldGradient)" stroke-width="1" opacity="0.3" stroke-dasharray="5,5"/>
+</svg>

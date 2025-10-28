@@ -38,8 +38,10 @@ body {
   z-index: 10;
 }
 .header-inner { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; gap: 16px; }
+.brand-link { text-decoration: none; color: inherit; cursor: pointer; }
+.brand-link:hover .brand-logo { transform: scale(1.05); filter: drop-shadow(0 6px 12px rgba(212, 175, 55, .4)); }
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand-icon { width: 40px; height: 40px; filter: drop-shadow(0 4px 8px rgba(212, 175, 55, .2)); }
+.brand-logo { width: 48px; height: 48px; filter: drop-shadow(0 4px 8px rgba(212, 175, 55, .2)); transition: all 0.3s ease; }
 .title { margin: 0; font-size: 22px; letter-spacing: .5px; }
 .title.fancy { font-family: 'Marcellus', serif; font-size: 26px; letter-spacing: .8px; }
 .subtitle { font-size: 12px; color: var(--muted); }
