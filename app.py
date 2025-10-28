@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import annotations
 import os
-from flask import Flask, jsonify, request, render_template
+from flask import Flask, jsonify, request, render_template, send_from_directory
 
 # long_interpretation fonksiyonlarını içe aktar
 import long_interpretation as li
@@ -66,6 +66,14 @@ def api_symbols():
 @app.route("/api/health")
 def api_health():
     return jsonify({"ok": True})
+
+@app.route("/robots.txt")
+def robots():
+    return send_from_directory(".", "robots.txt")
+
+@app.route("/sitemap.xml")
+def sitemap():
+    return send_from_directory(".", "sitemap.xml")
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))

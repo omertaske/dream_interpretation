@@ -49,9 +49,20 @@ body {
 .nav-link { color: var(--text); opacity: .85; text-decoration: none; padding: 8px 10px; border-radius: 8px; }
 .nav-link:hover { background: rgba(212, 175, 55, .08); opacity: 1; }
 
-.hero { padding: 32px 0 8px; }
-.hero-text h2 { margin: 0 0 8px; font-size: 28px; }
-.hero-text p { margin: 0; color: var(--muted); }
+.hero { padding: 40px 0 16px; text-align: center; }
+.hero-title { margin: 0 0 8px; font-size: 32px; font-family: 'Marcellus', serif; color: var(--accent); }
+.hero-subtitle { margin: 0 0 12px; font-size: 22px; font-weight: 600; }
+.hero-text p { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.6; max-width: 800px; margin: 0 auto; }
+
+.section-title { margin: 0 0 8px; font-family: 'Marcellus', serif; font-size: 24px; color: var(--accent); }
+.section-desc { margin: 0 0 16px; color: var(--muted); line-height: 1.6; }
+.help-text { display: block; margin-top: 6px; color: var(--muted); font-size: 13px; line-height: 1.4; }
+
+.popular-dreams { margin-top: 32px; }
+.popular-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 16px; }
+.popular-item { padding: 16px; background: rgba(255,255,255,.03); border: 1px solid rgba(212,175,55,.12); border-radius: 12px; }
+.popular-item h3 { margin: 0 0 8px; font-size: 16px; color: var(--accent); }
+.popular-item p { margin: 0; font-size: 14px; color: var(--muted); line-height: 1.5; }
 
 .card {
   margin: 20px 0 28px; padding: 20px; border-radius: 16px;

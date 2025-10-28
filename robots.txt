@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Sitemap: https://ruyalar-rehberi.onrender.com/sitemap.xml
+
+# Google Bot
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing Bot
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
