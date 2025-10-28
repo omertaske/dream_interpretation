@@ -75,6 +75,10 @@ def robots():
 def sitemap():
     return send_from_directory(".", "sitemap.xml")
 
+@app.route("/google9f681b80401e9a22.html")
+def google_verification():
+    return send_from_directory(".", "google9f681b80401e9a22.html")
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     debug = str(os.environ.get("DEBUG", "1")).lower() in {"1", "true", "yes"}
