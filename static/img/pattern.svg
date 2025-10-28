@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="420" viewBox="0 0 420 420" fill="none">
+  <rect width="420" height="420" fill="#0b1111"/>
+  <g opacity=".06" stroke="#D4AF37" stroke-width="1">
+    <!-- Basit İslami geometrik desen - sekizgen yıldız  -->
+    <defs>
+      <g id="star8">
+        <polygon points="0,-20 6,-6 20,0 6,6 0,20 -6,6 -20,0 -6,-6"/>
+      </g>
+    </defs>
+    <g transform="translate(30,30)">
+      <use href="#star8"/>
+    </g>
+    <g transform="translate(120,60)">
+      <use href="#star8"/>
+    </g>
+    <g transform="translate(210,30)">
+      <use href="#star8"/>
+    </g>
+    <g transform="translate(300,60)">
+      <use href="#star8"/>
+    </g>
+    <g transform="translate(60,120)">
+      <use href="#star8"/>
+    </g>
+    <g transform="translate(150,150)">
+      <use href="#star8"/>
+    </g>
+    <g transform="translate(240,120)">
+      <use href="#star8"/>
+    </g>
+    <g transform="translate(330,150)">
+      <use href="#star8"/>
+    </g>
+  </g>
+</svg>

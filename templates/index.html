@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rüyalar Rehberi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Marcellus&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <svg class="brand-icon" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#B28B5B" />
+              <stop offset="100%" stop-color="#D4AF37" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#g1)" d="M42 10a22 22 0 1 0 0 44 18 18 0 1 1 0-44z" />
+        </svg>
+        <div>
+          <h1 class="title fancy">Rüyalar Rehberi</h1>
+          <div class="subtitle">Klasik kaynaklara dayalı, zarif ve yalın tabirler</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="#yorum" class="nav-link">Tabir</a>
+        <a href="#sorular" class="nav-link">Sık Sorulanlar</a>
+        <a href="#hakkinda" class="nav-link">Hakkında</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Rüyanızı anlatın, yorum uzun ve anlaşılır gelsin</h2>
+        <p>Koyu ve sade bir yüzeyde, incelikli dini motiflerden ilham alan bir tasarımla rüyalarınızı anlamlandırın.</p>
+      </div>
+    </section>
+
+    <section id="yorum" class="card">
+      <div class="row">
+        <div class="field">
+          <label class="label" for="sym-search">Sembol ara</label>
+          <input id="sym-search" class="input" type="text" placeholder="Örn: yılan, savaş, altın" />
+          <ul id="sym-suggest" class="suggest hidden" role="listbox"></ul>
+        </div>
+      </div>
+      <form id="form" class="form" autocomplete="off">
+        <label class="label" for="text">Rüyanızı anlatın</label>
+        <textarea id="text" class="input input--area" rows="7" placeholder="Örn: Rüyamda karanlık bir ormanda yürürken bir yılan gördüm, sonra deniz kenarında altın buldum..."></textarea>
+
+        <div class="row">
+          <div class="field">
+            <label class="label" for="length">Detay seviyesi</label>
+            <select id="length" class="input">
+              <option value="short">Kısa</option>
+              <option value="medium">Orta</option>
+              <option value="long" selected>Uzun</option>
+            </select>
+          </div>
+          <div class="field">
+            <label class="label" for="topk">Sembol sayısı</label>
+            <input id="topk" class="input" type="number" min="1" max="20" value="8" />
+          </div>
+        </div>
+
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">Yorumla</button>
+          <button type="button" id="btn-sample" class="btn btn-ghost">Örnek rüya</button>
+          <button type="button" id="btn-clear" class="btn btn-ghost">Temizle</button>
+          <button type="button" id="btn-copy" class="btn btn-ghost">Kopyala</button>
+        </div>
+      </form>
+
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <span>Yorum hazırlanıyor...</span>
+      </div>
+
+      <div id="error" class="error hidden" role="alert"></div>
+
+      <article id="result" class="result hidden print-area" aria-live="polite">
+        <h3>Özet</h3>
+        <p id="r-summary"></p>
+
+        <h3>İlgili Semboller ve Anlamları</h3>
+        <ul id="r-items" class="items"></ul>
+
+        <h3>Muhtemel Yorum</h3>
+        <p id="r-body"></p>
+
+        <h3>Genel Ton</h3>
+        <p id="r-tone"></p>
+
+        <h3>Öneriler</h3>
+        <ul id="r-recs" class="recs"></ul>
+      </article>
+    </section>
+
+    <section id="gecmis" class="card">
+      <h2>Geçmiş</h2>
+      <p class="muted">Son 5 yorum kaydedilir. Üzerine tıklayarak yeniden görüntüleyebilirsiniz.</p>
+      <ul id="history" class="history"></ul>
+    </section>
+
+    <section id="sorular" class="card">
+      <h2>Sık Sorulanlar</h2>
+      <details>
+        <summary>Bu yorumlar hangi kaynaklara dayanıyor?</summary>
+        <p>Yorumlar klasik rüya tabiri metinlerinden derlenen kapsamlı bir veri setine dayanır ve doğrudan metinleri esas alır.</p>
+      </details>
+      <details>
+        <summary>Yapay zeka kullanıyor musunuz?</summary>
+        <p>Arka planda veri tabanına dayalı eşleştirme ve şablonlama vardır. İsterseniz daha ileri LLM entegrasyonu eklenebilir.</p>
+      </details>
+      <details>
+        <summary>Verilerim kaydediliyor mu?</summary>
+        <p>Bu örnek uygulamada istekler sunucuda işlem için kullanılır ve kalıcı olarak saklanmaz.</p>
+      </details>
+    </section>
+
+    <section id="hakkinda" class="card">
+      <h2>Hakkında</h2>
+      <p>Rüyalar Rehberi, Türkçe rüya tabirlerini anlaşılır ve zarif bir arayüzle sunmak için tasarlandı. Dini motiflerden ilham alan görsel dil ve koyu bir tema benimsenmiştir.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Rüyalar Rehberi • Birlikte daha çok hayra vesile olsun</small>
+    </div>
+  </footer>
+
+  <script src="/static/js/app.js" defer></script>
+</body>
+</html>
